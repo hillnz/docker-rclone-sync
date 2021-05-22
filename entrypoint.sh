@@ -5,6 +5,7 @@ while true; do
         --backup-dir "${RCLONE_BACKUP}$(date +%Y-%m-%d)" \
         "--config=${RCLONE_CONFIG_DIR}/rclone.conf" \
         --bwlimit "06:00,125 00:30,off" \
+        --dscp LE \
         --exclude-if-present .no_backup \
         --delete-excluded \
         --delete-during \
